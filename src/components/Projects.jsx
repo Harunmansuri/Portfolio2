@@ -19,8 +19,13 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, scale: 0.8, y: 50 },
-  show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  hidden: { opacity: 0, scale: 0.85, y: 60 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 const Portfolio = () => {
@@ -89,7 +94,7 @@ const Portfolio = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.2 }} // scroll par har baar trigger hoga
         >
           {portfolios.map(({ id, src, demoLink, codeLink }) => (
             <motion.div
@@ -105,6 +110,9 @@ const Portfolio = () => {
                 className="rounded-md w-full h-48 object-cover"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.4 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: false }}
               />
               <div className="flex items-center justify-center">
                 <a

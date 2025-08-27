@@ -9,11 +9,12 @@ const Home = () => {
     <div name="home" className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800">
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
 
-        {/* LEFT SIDE: Text Content with Animation */}
+        {/* LEFT SIDE: Text Content with Scroll Animation */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}   // scroll par trigger hoga, bar-bar
           className="flex flex-col justify-center h-full"
         >
           <h2 className="text-4xl sm:text-7xl font-bold text-white">I'm a Full Stack Developer</h2>
@@ -41,11 +42,12 @@ const Home = () => {
           </div>
         </motion.div>
 
-        {/* RIGHT SIDE: Hero Image with Zoom-Out + Glow */}
+        {/* RIGHT SIDE: Hero Image with Scroll Animation */}
         <motion.div
           initial={{ opacity: 0, scale: 1.2, x: 50 }}
-          animate={{ opacity: 1, scale: 1, x: 0 }}
+          whileInView={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
           className="relative"
         >
           {/* Subtle Glow */}

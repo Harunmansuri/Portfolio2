@@ -2,6 +2,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import { SiLeetcode } from "react-icons/si"; // LeetCode icon import
 
 const SocialLinks = () => {
 
@@ -10,38 +11,47 @@ const SocialLinks = () => {
             id: 1,
             child: (
                 <>
-                    LinkedIn <FaLinkedin size={30} />
+                    LeetCode <SiLeetcode size={30} />
                 </>  
             ),
-            href: 'https://www.linkedin.com/in/mausoomi-roy/',
+            href: 'https://leetcode.com/harunmansuri1',  // apna LeetCode profile link dal do
             style: 'rounded-tr-md'
         },
         {
             id: 2,
             child: (
                 <>
-                    GitHub <FaGithub size={30} />
+                    LinkedIn <FaLinkedin size={30} />
                 </>  
             ),
-            href: 'https://github.com/Mausoomi12',
+            href: 'https://www.linkedin.com/in/harun-mansuri',
         },
         {
             id: 3,
             child: (
                 <>
-                    Mail <HiOutlineMail size={30} />
+                    GitHub <FaGithub size={30} />
                 </>  
             ),
-            href: 'mailto:mausoomiroy68613@gmail.com',
+            href: 'https://github.com/Harunmansuri',
         },
         {
             id: 4,
             child: (
                 <>
+                    Mail <HiOutlineMail size={30} />
+                </>  
+            ),
+            href: 'mailto:mrharun961766@gmail.com',
+        },
+        {
+            id: 5,
+            child: (
+                <>
                     Resume <BsFillPersonLinesFill size={30} />
                 </>  
             ),
-            href: '/Mausoomi_Roy.pdf',
+            href: '/Harun_Mansuri.pdf',
             style: 'rounded-br-md',
             download: true,
         },
